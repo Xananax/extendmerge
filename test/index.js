@@ -53,6 +53,49 @@ describe('extending objects',function(){
 		c.a.should.eql(['your mom']);
 		extend.arrays = oldExtendArrays;
 	});
+	it('should allow for deep merges of complex objects',function(){
+		var obj1 = {
+			a:{
+				aa:{
+					aaa:'aaa'
+				,	aab:123
+				}
+			,	ab:['aba','abb','abc']
+			}
+		,	b:{
+				ba:[]
+			,	bb:'bb'
+			,	bc:{
+					bca:{}
+				,	bcb:{
+						bcba:['bcba1','bcba2','bcba3','bcba4',{prop:'value'}]
+					,	bcbb:['bcbb1','bcbb2']
+					,	bcbc:['bcbc1','bcbc2']
+					}
+				}
+			}
+		};
+		var obj2 = {
+			a:{
+				aa:{
+					aaa:'obj2aaa'
+				,	aab:456
+				}
+			,	ab:['obj2aba','obj2abb','obj2abc']
+			}
+		,	b:{
+				ba:['obj2A','obj2B']
+			,	bb:'obj2bb'
+			,	bc:{
+					bca:{}
+				,	bcb:{
+						bcba:['obj2bcba1','obj2bcba2']
+					}
+				}
+			}
+		};
+		var obj3 = extend({},obj1,obj2);
+	})
 });
 describe('manipulating objects',function(){
 	describe('#walk',function(){

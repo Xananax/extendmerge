@@ -1,6 +1,6 @@
 {
   "name": "extendmerge",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "deep extends objects and concatenates arrays",
   "main": "index.js",
   "directories": {

@@ -25,7 +25,7 @@
 			obj2 = arguments[i];
 			if(!is.defined(obj2)){continue;}
 			if(!is.defined(obj1)){
-				return is.array(obj2) ?
+				obj1 = is.array(obj2) ?
 					extend([],obj2)
 				:
 					is.object(obj2) ?
@@ -72,7 +72,9 @@
 	}
 
 	function extend_arrays(obj1,obj2){
-		if(is.empty(obj2)){return extend([],obj1);}
+		if(is.empty(obj2)){
+			return is.empty(obj1) ? [] : extend([],obj1);
+		}
 		var name,src,copy,isArray = is.array(obj2);
 		if(!isArray && !is.object(obj2)){
 			obj1.push(obj2);
