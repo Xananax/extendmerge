@@ -1,0 +1,33 @@
+{
+  "name": "extendmerge",
+  "version": "0.5.0",
+  "description": "deep extends objects and concatenates arrays",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "dis": "^0.2.7"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Xananax/extendmerge.git"
+  },
+  "keywords": [
+    "extend",
+    "utility"
+  ],
+  "author": "xananax@yelostudio.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xananax/extendmerge/issues"
+  },
+  "homepage": "https://github.com/Xananax/extendmerge"
+}
